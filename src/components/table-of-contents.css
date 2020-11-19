@@ -1,0 +1,48 @@
+.TableOfContents {
+    width: 516px;
+    background-color: #f7f7f7;
+    padding: 25px;
+    margin: 40px auto;
+}
+
+.TableOfContents__header {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.TableOfContents__contents {
+    margin-top: 20px;
+}
+
+.TableOfContents ul {
+    list-style-type: decimal;
+    margin: 14px 0 0 18px;
+}
+
+.TableOfContents ul li {
+    font-size: 16px;
+}
+
+.TableOfContents ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.TableOfContents ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.TableOfContents ul li a:hover,
+.TableOfContents ul li a:focus,
+.TableOfContents ul li a:active {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 580px) {
+    .TableOfContents {
+        width: 90%;
+        background-color: #f7f7f7;
+        padding: 15px;
+        margin: 40px auto;
+    }
+}
