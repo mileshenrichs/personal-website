@@ -1,20 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import './layout.css';
 
 export default function Layout({ includeFooter = true, children }) {
-    const data = useStaticQuery(
-        graphql`
-          query {
-            site {
-              siteMetadata {
-                title
-              }
-            }
-          }
-        `
-      )
-
     return (
         <div className="Layout">
           <header>
@@ -28,9 +16,9 @@ export default function Layout({ includeFooter = true, children }) {
           {includeFooter && 
             <footer>
               <div className="footer-content">
-                <p><i>Having a big footer like this makes the site feel a bit more official. <br />Eventually I’ll find something useful to put here.</i> 😄</p>
+                <p><i>Thanks for reading!</i> <span role="img" aria-label="smiley face">😄</span></p>
               </div>
             </footer>}
         </div>
-    )
+    );
 }

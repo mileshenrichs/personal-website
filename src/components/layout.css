@@ -16,7 +16,7 @@ h1.Layout__site-title {
 
 .Layout__content,
 .footer-content {
-  width: 840px;
+  width: 730px;
   margin: 0 auto;
 }
 
@@ -30,12 +30,12 @@ footer {
   padding-top: 24px;
 }
 
-footer p {
+footer .footer-content p i {
   font-size: 14px;
   color: #d5d5d5;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 875px) {
   .Layout__content,
   .footer-content {
     width: 90%;

@@ -13,7 +13,7 @@ export default function BlogPost({ data }) {
     <Layout>
       <SEO title={post.frontmatter.title + ' Book Summary'} description={post.excerpt} />
       <div>
-        <h1 className="BlogPost__title"><i>{post.frontmatter.title}</i><span className="colon-spacer"></span>{': Book Summary'}</h1>
+        <h1 className="BlogPost__title"><i>{post.frontmatter.title}</i>{': Book Summary'}</h1>
         <span className="BlogPost__date">{post.frontmatter.date}</span>
         <div className="BlogPost__image-wrapper">
           <Img fluid={featuredImgFluid} alt={post.frontmatter.title + ' book cover'} />
@@ -34,13 +34,13 @@ export const query = graphql`
         date
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
-      tableOfContents(absolute: false)
+      tableOfContents(absolute: false, maxDepth: 2)
       excerpt
     }
   }

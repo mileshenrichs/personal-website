@@ -4,8 +4,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === `MarkdownRemark`) {
-        let slug = createFilePath({ node, getNode, basePath: `pages` });
-        slug = '/book-summary' + slug.substring(0, slug.length - 1);
+        let slug = createFilePath({ node, getNode, basePath: `blog-posts/book-summaries` });
+        slug = '/book-summary' + slug;
         createNodeField({
           node,
           name: `slug`,

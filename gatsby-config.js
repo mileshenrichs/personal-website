@@ -21,9 +21,16 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               className: `article-header-link`,
-              elements: [`h2`],
+              elements: [`h2`, `h3`],
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 730,
+              linkImagesToOriginal: false
+            }
+          }
         ],
       },
     },
@@ -33,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `lora`
+          `lora\:400,400i,500,600`
         ],
         display: 'swap'
       }
@@ -44,10 +51,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon/favicon64.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
