@@ -6,6 +6,11 @@
     color: #0F0F0F;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .homepage-blurb {
     text-align: center;
     max-width: 600px;
